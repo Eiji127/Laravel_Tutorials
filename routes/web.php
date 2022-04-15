@@ -36,3 +36,5 @@ Route::get('/join/', function() {
 Route::get('/{id}/', function($id) {
     return $id . 'のページ';
 });
+
+Route::get('/sum/{x}/{y}/', 'App\Http\Controllers\MathController@sum');
