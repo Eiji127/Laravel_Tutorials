@@ -16,3 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/archives/', function() {
+    return '記事一覧';
+});
+
+Route::get('/archives/{category}/', function($category) {
+    return $category . 'の一覧';
+});
+
+Route::post('/join/', function() {
+    return '入会の申し込み';
+});
+
+Route::get('/join/', function() {
+    return redirect()->to('/');
+});
+
+Route::get('/{id}/', function($id) {
+    return $id . 'のページ';
+});
